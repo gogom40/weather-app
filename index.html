@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg">
+  <div class="container my-4">
+    <a class="navbar-brand" href="/index.html">
+      <img src="./imgs/logo.png" alt="Weather logo" class="logo">
+      <div class="logo-info d-inline-block align-middle">
+          <h1 class="site-title">Weather</h1>
+          <span class="site-description text-white-50">tagline goes here</span>
+      </div>
+  </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars" style="color: #ffffff;"></i></i>
+    </button>
+    <div class="collapse navbar-collapse" id="main">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link px-4 mx-2 " aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 mx-2" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 mx-2 " href="#">Live Camera</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 mx-2" href="#">Photos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 mx-2" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- searchbar -->
+<section class="hero ">
+  <div class=" container">
+      <div class="find-form position-relative col-sm-6 col-md-12">
+          <input id="searchBar" class="form-control w-100 border-0 rounded-5" type="text" placeholder="Find your location...">
+          <button id="btnFind" class="btn btn-find position-absolute btn-info rounded-5 text-light" type="button">Find</button>
+      </div>
+  </div>
+</section>
+
+<!-- forcast -->
+  <div class="threeContainers m-auto row px-md-5 mx-md-5 position-relative">
+    <!-- Today Section -->
+
+    <div class="day tday p-3 col-md-4 rounded-start-4 ">
+      <div class="dayNav d-flex justify-content-between align-items-center text-white-50 ">
+        <h3 id="todayName" class="small">Sunday</h3>
+        <h3 id="todayDate" class="small">18 November</h3>
+      </div>
+      <div class="dayContent py-4">
+        <h4 id="city" class="fs-5 text-white-50">Cairo</h4>
+        <div class="icn py-3 d-flex justify-content-around align-items-center">
+          <div>
+            <h3 id="todayDegree" class="display-4 fw-bold d-inline-block pe-3">25</h3><h2 class="display-4 fw-bold d-inline-block"> <sup>o</sup>C</h2>
+          </div>
+          <img src="" alt="icon" id="todayIcon" width="90">
+        </div>
+        <span id="todayDescription" class="small text-info">Partly cloudy</span>
+      </div>
+      <div class="dayFooter d-flex justify-content-between align-items-center text-white-50">
+        <div class="footerIcn">
+          <i class="fa-solid fa-umbrella fa-lg pe-1"></i>
+          <span id="humidity" class="pe-1 small">20</span><span class="small">%</span>
+        </div>
+        <div class="footerIcn">
+          <i class="fa-solid fa-wind fa-lg pe-1"></i>
+          <span id="wind" class="small">18</span><span class="small">km/h</span>
+        </div>
+        <div class="footerIcn">
+          <i class="fa-regular fa-compass fa-lg pe-1"></i>
+          <span id="compass" class="small">East</span>
+        </div>
+      </div>
+    </div>
+    <!-- Next Day  -->
+    <div class="day nday p-3 col-md-4">
+      <div class="dayNav d-flex justify-content-center align-items-center flex-column">
+        <h3 id="dayName" class="nextDayName small text-white-50">Sunday</h3>
+      </div>
+      <div class="dayContent py-2 text-center">
+        <img src="" alt="icon" class="nextDayIcon" width="80">
+        <div class="d-flex justify-content-center display-4">
+          <h2 class="maxDegree display-4 fw-bold pe-2">25</h2>
+          <h2 class="display-4 fw-bold"><sup>o</sup>C</h2>
+        </div>
+        <div class="py-2 d-flex justify-content-center">
+          <h3 class="minDegree pe-2 text-white-50">17.8</h3>
+          <h3 class="text-white-50"><sup>o</sup>C</h3>
+        </div>
+        <span class="nextDayDescription small text-info">Partly cloudy</span>
+      </div>
+    </div>
+
+    <!-- The day after the next day -->
+    <div class="day tday p-3 col-md-4 rounded-end-4 ">
+      <div class="dayNav d-flex justify-content-center align-items-center flex-column">
+        <h3 id="dayName" class="nextDayName small text-white-50">Sunday</h3>
+      </div>
+      <div class="dayContent py-2 text-center">
+        <img src=""  class="nextDayIcon" width="80">
+        <div class="d-flex justify-content-center display-4">
+          <h2 class="maxDegree display-4 fw-bold pe-2">25</h2>
+          <h2 class="display-4 fw-bold"><sup>o</sup>C</h2>
+        </div>
+        <div class="py-2 d-flex justify-content-center">
+          <h3 class="minDegree pe-2 text-white-50">17.8</h3>
+          <h3 class="text-white-50"><sup>o</sup>C</h3>
+        </div>
+        <span class="nextDayDescription small text-info">Partly cloudy</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+      <div class="row flex-column flex-md-row align-items-center mb-3">
+          <div class="col-lg-8 ">
+              <form class="subscribe-form position-relative">
+                  <input id="subscribeInput" class="form-control w-100" type="text"
+                      placeholder="Enter your email to subscribe...">
+                  <button id="btnSubscribe" class=" btn-find position-absolute bg-info text-light fw-medium" type="button">Subscribe</button>
+              </form>
+          </div>
+          <div class="col-lg-3  d-flex justify-content-center ms-lg-auto mt-4 mt-lg-0 pt-2 pt-lg-0">
+              <div class="social-links">
+                  <a href="#" class=""><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" class=""><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#" class=""><i class="fa-brands fa-google-plus"></i></a>
+                  <a href="#" class=""><i class="fa-brands fa-pinterest"></i></a>
+              </div>
+          </div>
+      </div>
+
+      <p class="text-white-50 text-md-start">Copyright 2014 Company name. Designed by Themezy. All rights
+          reserved</p>
+  </div>
+</footer>
+
+</body>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/all.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
